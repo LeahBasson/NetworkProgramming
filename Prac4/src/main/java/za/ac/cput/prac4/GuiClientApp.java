@@ -96,8 +96,8 @@ public class GuiClientApp extends JFrame implements ActionListener {
 
             txtRecords.setText("");
             for (Student s : records) {
-                txtRecords.append("Name: " + s.getStud_Name()
-                        + ", ID: " + s.getStud_id()
+                txtRecords.append("Name: " + s.getStudName()
+                        + ", ID: " + s.getStudId()
                         + ", Score: " + s.getScore() + "\n");
             }
         } catch (IOException ioe) {

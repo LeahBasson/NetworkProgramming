@@ -22,10 +22,10 @@ public class StudentDAO {
     public void insert(Student student) {
         try {
 
-            pstmt = this.con.prepareStatement("INSERT INTO Student (stud_name, stud_id, score) VALUES(?,?,?)");
+            pstmt = this.con.prepareStatement("INSERT INTO Student (studName, studId, score) VALUES(?,?,?)");
 
-            pstmt.setString(1, student.getStud_Name());
-            pstmt.setString(2, student.getStud_id());
+            pstmt.setString(1, student.getStudName());
+            pstmt.setString(2, student.getStudId());
             pstmt.setString(3, student.getScore());
 
             pstmt.executeUpdate();
@@ -62,8 +62,8 @@ public class StudentDAO {
             ResultSet rs = pstmt.executeQuery(); // stores the results from the select query
 
             while (rs.next()) { // go through every row, then when there is no more rows the loop ends
-                String studName = rs.getString("stud_name"); // take the value from subCode column.
-                String studId = rs.getString("stud_id");
+                String studName = rs.getString("studName"); // take the value from subCode column.
+                String studId = rs.getString("studId");
                 String score = rs.getString("score");
 
                 Student student = new Student(studName, studId, score); // creates a subject object

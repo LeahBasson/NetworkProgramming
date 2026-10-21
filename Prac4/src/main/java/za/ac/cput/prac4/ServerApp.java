@@ -15,7 +15,7 @@ public class ServerApp extends JFrame {
     private ObjectOutputStream out;
     private ObjectInputStream in;
     ArrayList<Student> student = new ArrayList<>();
-    
+
     // student object
     private StudentDAO studentDB;
 
@@ -26,9 +26,12 @@ public class ServerApp extends JFrame {
         // Create server socket
         try {
             listener = new ServerSocket(6666);
+            studentDB = new StudentDAO(); // create DAO object
+
         } catch (IOException ioe) {
             System.out.println("IO Exception: " + ioe.getMessage());
         }
+
     }
 
     //declare a method to listen for client connections
@@ -67,7 +70,7 @@ public class ServerApp extends JFrame {
                     String request = (String) clientMsg;
 
                     if (request.equals("RETRIEVE")) {
-                        ArrayList<Student> students =studentDB.select();
+                        ArrayList<Student> students = studentDB.select();
                         out.writeObject(students);
                         out.flush();
                     }

@@ -4,30 +4,30 @@ import java.io.Serializable;
 
 public class Student implements Serializable {
 
-    private String stud_name;
-    private String stud_id;
+    private String studName;
+    private String studId;
     private String score;
 
-    public Student(String stud_name, String stud_id, String score) {
-        this.stud_name = stud_name;
-        this.stud_id = stud_id;
+    public Student(String studName, String studId, String score) {
+        this.studName = studName;
+        this.studId = studId;
         this.score = score;
     }
 
-    public void setStud_Name(String stud_name) {
-        this.stud_name = stud_name;
+    public void setStudName(String stud_name) {
+        this.studName = studName;
     }
 
-    public String getStud_Name() {
-        return stud_name;
+    public String getStudName() {
+        return studName;
     }
 
-    public String getStud_id() {
-        return stud_id;
+    public String getStudId() {
+        return studId;
     }
 
-    public void setStud_id(String stud_id) {
-        this.stud_id = stud_id;
+    public void setStudId(String stud_id) {
+        this.studId = stud_id;
     }
 
     public String getScore() {
@@ -41,7 +41,7 @@ public class Student implements Serializable {
     // used to fill textfield.
     @Override
     public String toString() {
-        return "Student{" + "stud_name=" + stud_name + ", stud_id=" + stud_id + ", score=" + score + '}';
+        return "Student{" + "stud_name=" + studName + ", stud_id=" + studId + ", score=" + score + '}';
     }
 
 }// end of class

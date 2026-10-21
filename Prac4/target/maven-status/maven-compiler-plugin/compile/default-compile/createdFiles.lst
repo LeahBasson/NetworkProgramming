@@ -1,0 +1,5 @@
+za\ac\cput\dao\StudentDAO.class
+za\ac\cput\connection\DBConnection.class
+za\ac\cput\domain\Student.class
+za\ac\cput\prac4\GuiClientApp.class
+za\ac\cput\prac4\ServerApp.class
